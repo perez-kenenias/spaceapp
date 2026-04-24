@@ -1,16 +1,19 @@
 
 interface BannerProps {
-  titulo: string
+    titulo: string
 }
 
-const Banner = ({ titulo } : BannerProps) => {
-  return (
-    <figure className='banner'>
-        <h1 className='titulo'>
-            {titulo}
-        </h1>
-    </figure>
-  )
+const Banner = ({ titulo }: BannerProps) => {
+
+    if (!titulo)
+        return;
+    return (
+        <figure className='banner'>
+            <h1 className='titulo'>
+                {titulo}
+            </h1>
+        </figure>
+    )
 }
 
 export default Banner

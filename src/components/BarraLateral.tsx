@@ -1,18 +1,26 @@
 import ItemMenu from "./ItemMenu"
 
 const BarraLateral = () => {
-  return (
-    <aside>
-        <nav>
-            <ul className="listaMenu">
-                <ItemMenu textoMenu="Inicio"></ItemMenu>
-                <ItemMenu textoMenu="Más Vistas"></ItemMenu>
-                <ItemMenu textoMenu="Nuevas"></ItemMenu>
-                <ItemMenu textoMenu="Sorprendeme"></ItemMenu>
-            </ul>
-        </nav>
-    </aside>
-  )
+
+    const opcionesMenu = [
+        "Inicio",
+        "Más Vistas",
+        "Nuevas",
+        "Sorprendeme", 
+        "Quienes somos"
+    ];
+
+    return (
+        <aside>
+            <nav>
+                <ul className="listaMenu">
+                    {
+                        opcionesMenu.map((opcion, posicion) => (<ItemMenu key={posicion} textoMenu={opcion} />))
+                    }
+                </ul>
+            </nav>
+        </aside>
+    )
 }
 
 export default BarraLateral

@@ -1,10 +1,15 @@
 import Banner from './Banner'
 import Imagen from './Imagen'
 
-const Galeria = () => {
+
+interface GaleriaProps {
+    fraseAplicacion: string
+}
+
+const Galeria = ({ fraseAplicacion } : GaleriaProps) => {
   return (
     <section className='galeria'>
-        <Banner titulo={`La galería más completa de fotos del espacio.`}></Banner>
+        <Banner titulo={fraseAplicacion}></Banner>
         <h2 className='subtitulo'>Navega por la galería</h2>
         <section className='imagenes'>
             <Imagen archivoImagen='img/Card_1.png' titulo="Imagen 1"></Imagen>
