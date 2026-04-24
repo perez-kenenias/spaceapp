@@ -1,4 +1,4 @@
-import React from 'react'
+
 import BarraLateral from './BarraLateral'
 import Galeria from './Galeria'
 

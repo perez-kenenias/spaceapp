@@ -5,11 +5,10 @@ const BarraLateral = () => {
     <aside>
         <nav>
             <ul className="listaMenu">
-                <ItemMenu></ItemMenu>
-                <ItemMenu></ItemMenu>
-                <ItemMenu></ItemMenu>
-                <ItemMenu></ItemMenu>
-                <ItemMenu></ItemMenu>
+                <ItemMenu textoMenu="Inicio"></ItemMenu>
+                <ItemMenu textoMenu="Más Vistas"></ItemMenu>
+                <ItemMenu textoMenu="Nuevas"></ItemMenu>
+                <ItemMenu textoMenu="Sorprendeme"></ItemMenu>
             </ul>
         </nav>
     </aside>

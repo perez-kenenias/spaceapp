@@ -1,10 +1,13 @@
-import React from 'react'
 
-const Banner = () => {
+interface BannerProps {
+  titulo: string
+}
+
+const Banner = ({ titulo } : BannerProps) => {
   return (
     <figure className='banner'>
         <h1 className='titulo'>
-            La galería más completa de fotos del espacio.
+            {titulo}
         </h1>
     </figure>
   )

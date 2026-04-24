@@ -1,11 +1,15 @@
-import React from 'react'
 
-const Imagen = () => {
+interface ImagenProps {
+  titulo: string
+  archivoImagen: string
+}
+
+const Imagen = ({titulo, archivoImagen} : ImagenProps) => {
   return (
     <figure className='imagenGaleria'>
-        <img src="img/Card_1.png" alt="imagen"/>
+        <img src={archivoImagen} alt="imagen"/>
         <figcaption>
-            <h3>Titulo</h3>
+            <h3>{titulo}</h3>
         </figcaption>
     </figure>
   )

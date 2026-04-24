@@ -1,9 +1,12 @@
-import React from 'react'
 
-const ItemMenu = () => {
+interface ItemMenuProps {
+  textoMenu: string
+}
+
+const ItemMenu = ({ textoMenu }: ItemMenuProps) => {
   return (
     <li className='opcionMenu'>
-        Opción de Menú
+        {textoMenu}
     </li>
   )
 }
