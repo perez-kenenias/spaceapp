@@ -1,6 +1,9 @@
+import { useState } from "react";
 import ItemMenu from "./ItemMenu"
 
 const BarraLateral = () => {
+
+    const [opcionSelecionada, setOpcionSeleccionada] = useState("", );
 
     const opcionesMenu = [
         "Inicio",
@@ -15,8 +18,10 @@ const BarraLateral = () => {
             <nav>
                 <ul className="listaMenu">
                     {
-                        opcionesMenu.map((opcion, posicion) => (<ItemMenu key={posicion} textoMenu={opcion} />))
-                    }
+                        opcionesMenu.map((opcion, posicion) => {
+                        const seleccionada = opcion === opcionSelecionada;
+                        return <ItemMenu key={posicion} textoMenu={opcion} seleccionada={ seleccionada } />
+                    })}
                 </ul>
             </nav>
         </aside>
