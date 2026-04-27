@@ -5,6 +5,7 @@ interface ImagenData {
     id: number
     titulo: string
     archivoImagen: string
+    favorita: boolean
 }
 
 interface ModalProps {
@@ -16,9 +17,7 @@ const Modal = ({ imagen, onClose }: ModalProps) => {
     return (
         <dialog className='modal' open>
             <Imagen
-                id={imagen.id}
-                archivoImagen={imagen.archivoImagen}
-                titulo={imagen.titulo}
+                imagen={imagen}
                 expandida={true}
                 imagenSeleccionada={onClose}
             />
