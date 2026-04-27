@@ -1,14 +1,16 @@
 
 interface ItemMenuProps {
   textoMenu: string
-  seleccionada: string
+  seleccionada: boolean
+  opcionSeleccionada: React.Dispatch<React.SetStateAction<string>>
 }
 
-const ItemMenu = ({ textoMenu, seleccionada }: ItemMenuProps) => {
+const ItemMenu = ({ textoMenu, seleccionada, opcionSeleccionada }: ItemMenuProps) => {
   return (
-    <li className='opcionMenu' style={ seleccionada ? 
-      { backgroundColor: 'black' } : undefined }>
-      { textoMenu }
+    <li onClick={ () =>  opcionSeleccionada(textoMenu)} className='opcionMenu'
+      style={seleccionada ?
+        { backgroundColor: 'black' } : undefined}>
+      {textoMenu}
     </li>
   )
 }

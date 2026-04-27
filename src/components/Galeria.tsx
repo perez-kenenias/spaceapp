@@ -1,5 +1,6 @@
 import Banner from './Banner'
 import Imagen from './Imagen'
+import Modal from './Modal'
 
 
 interface GaleriaProps {
@@ -19,6 +20,7 @@ const Galeria = ({ fraseAplicacion } : GaleriaProps) => {
             <Imagen archivoImagen='img/Card_5.png' titulo="Imagen 5"></Imagen>
             <Imagen archivoImagen='img/Card_6.png' titulo="Imagen 6"></Imagen>
         </section>
+        <Modal></Modal>
     </section>
   )
 }
