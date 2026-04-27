@@ -1,13 +1,36 @@
 import React from 'react'
 import Imagen from './Imagen'
 
-const Modal = () => {
+interface ImagenData {
+    id: number
+    titulo: string
+    archivoImagen: string
+}
+
+interface ModalProps {
+    imagen: ImagenData
+    onClose: React.Dispatch<React.SetStateAction<number>>
+}
+
+const Modal = ({ imagen, onClose }: ModalProps) => {
     return (
-        <dialog className='modal'>
-            <Imagen titulo='' archivoImagen={'img/Card_1.png'}></Imagen>
+        <dialog className='modal' open>
+            <Imagen
+                id={imagen.id}
+                archivoImagen={imagen.archivoImagen}
+                titulo={imagen.titulo}
+                expandida={true}
+                imagenSeleccionada={onClose}
+            />
             <form method='dialog'>
-                <button className='botonCerrar'>
-                    <img src='iconos/cerrar.png' alt='boton de cerrar' />
+                <button className='botonCerrar'
+                    onClick={() => onClose(0)}>
+                    <img
+                        src='img/iconos/cerrar.png'
+                        alt='boton de cerrar'
+                        width={32}
+                        height={32}
+                    />
                 </button>
             </form>
         </dialog>

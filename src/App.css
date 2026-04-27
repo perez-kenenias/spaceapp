@@ -120,3 +120,43 @@
     }
   }
 }
+
+
+.modal {
+  position: absolute;
+  top: 294px;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  width: 1156px;
+  display: flex;
+  justify-content: center;
+
+  form {
+    button {
+      position: relative;
+      top: 20px;
+      right: 60px;
+    }
+  }
+}
+
+.botonCerrar {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.botonCerrar img {
+  width: 32px;
+  height: 32px;
+}
+
+.tituloImagen {
+  display: flex;
+  justify-content: space-between;
+}
