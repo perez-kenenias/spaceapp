@@ -26,10 +26,11 @@ const Imagen = ({ imagen, expandida = false, imagenSeleccionada, actualizaFavori
         <h3>{imagen.titulo}</h3>
         <div onClick={() => {
           actualizaFavoritas(imagen.id)
-        }}></div>
-        {imagen.favorita
-          ? <img src="img/iconos/favorito-activo.png" />
-          : <img src="img/iconos/favorito.png" />}
+        }}>
+          {imagen.favorita
+            ? <img src="img/iconos/favorito-activo.png" />
+            : <img src="img/iconos/favorito.png" />}
+        </div>
       </figcaption>
     </figure>
   )

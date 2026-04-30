@@ -11,14 +11,16 @@ interface ImagenData {
 interface ModalProps {
     imagen: ImagenData
     onClose: React.Dispatch<React.SetStateAction<number>>
+    actualizaFavoritas: (id: number) => void
 }
 
-const Modal = ({ imagen, onClose }: ModalProps) => {
+const Modal = ({ imagen, onClose, actualizaFavoritas }: ModalProps) => {
     return (
         <dialog className='modal' open>
             <Imagen
                 imagen={imagen}
                 expandida={true}
+                actualizaFavoritas={actualizaFavoritas}
                 imagenSeleccionada={onClose}
             />
             <form method='dialog'>

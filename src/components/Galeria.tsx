@@ -89,7 +89,8 @@ const Galeria = ({ fraseAplicacion } : GaleriaProps) => {
         {imgSeleccionada > 0 && (
             <Modal
                 imagen={listaImagenes.find(img => img.id === imgSeleccionada)!}
-                onClose={setImgSeleccionada}/>
+                onClose={setImgSeleccionada}
+                actualizaFavoritas={actualizaFavoritas}/>
         )}    
     </section>
   )
