@@ -15,7 +15,7 @@ const handleBuscar = () => {
     return (
         <>
             <div>
-                <input type='text' ref={refCajaBusqueda} className='cajaBusqueda' onChange={ (e) => setValorABuscar(e.target.value) }/>
+                <input type='text' ref={refCajaBusqueda} className='cajaBusqueda' />
                 <button className="botonBuscar" onClick={handleBuscar}>Buscar</button>
             </div>
             <p style={ {color: 'white'} } ref={refParrafoValor}></p>
