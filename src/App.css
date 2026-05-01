@@ -151,25 +151,15 @@
   cursor: pointer;
 }
 
-.botonCerrar img {
-  width: 32px;
-  height: 32px;
-}
-
 .tituloImagen {
   display: flex;
   justify-content: space-between;
 }
 
-.tituloImagen{
-  display: flex;
-  justify-content: space-between;
-}
-
-.botonBuscar{
+.botonBuscar {
   font-weight: 400;
   font-size: 14px;
-  background-color: #7B79E5;
+  background-color: #7B78E5;
   color: #FFFFFF;
   max-width: 300px;
   padding: 0 20px;
@@ -178,10 +168,9 @@
   border-radius: 10px;
   border-color: #001634;
   height: 56px;
-
 }
 
--busqueda{
+.busqueda {
   display: flex;
   justify-content: end;
 }
